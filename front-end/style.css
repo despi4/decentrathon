@@ -1,20 +1,82 @@
+:root {
+  --bg: #f4f6f9;
+  --text: #222;
+  --card: #fff;
+  --accent: #4caf50;
+  --danger: #f44336;
+  --border: #ccc;
+}
+
+body.dark {
+  --bg: #181818;
+  --text: #eee;
+  --card: #242424;
+  --accent: #66bb6a;
+  --danger: #ef5350;
+  --border: #444;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f9;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
+  transition: background 0.3s, color 0.3s;
 }
 
 .container {
-  background: white;
-  padding: 20px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: var(--card);
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
   text-align: center;
-  width: 400px;
+  width: 420px;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.subtitle {
+  margin: 10px 0 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.upload-area {
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  padding: 30px;
+  cursor: pointer;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.upload-area:hover {
+  border-color: var(--accent);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+#uploadArea p {
+  margin: 0;
+  font-size: 14px;
+}
+#uploadArea span {
+  font-size: 12px;
+  opacity: 0.7;
 }
 
 #preview-container {
@@ -25,8 +87,8 @@ body {
   max-width: 100%;
   max-height: 200px;
   display: none;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  border-radius: 10px;
+  border: 1px solid var(--border);
 }
 
 .buttons {
@@ -34,20 +96,25 @@ body {
 }
 
 button {
-  padding: 10px 15px;
+  padding: 10px 16px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  margin: 0 5px;
+  margin: 0 6px;
   font-size: 14px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
 }
 
 #analyzeBtn {
-  background: #4caf50;
+  background: var(--accent);
   color: white;
 }
 
 #deleteBtn {
-  background: #f44336;
+  background: var(--danger);
   color: white;
 }
