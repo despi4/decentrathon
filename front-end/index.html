@@ -8,18 +8,21 @@
 </head>
 <body>
   <div class="container">
-    <h1>🚗 AI Проверка автомобиля</h1>
-    <p>Загрузите фото машины, чтобы узнать её состояние</p>
+    <h1>Определение состояния автомобиля</h1>
+    <p>Загрузите фото, чтобы проверить: чистый / грязный, целый / повреждённый.</p>
 
-    <div class="upload-box">
-      <input type="file" id="fileInput" accept="image/*">
-      <button onclick="analyzeImage()">Проверить</button>
+    <input type="file" id="fileInput" accept="image/*">
+    <div id="preview-container">
+      <img id="preview" alt="Превью фото" />
     </div>
 
-    <div id="preview"></div>
-    <div id="result"></div>
-  </div>
+    <div class="buttons">
+      <button id="analyzeBtn">Проверить</button>
+      <button id="deleteBtn" class="danger">Удалить фото</button>
+    </div>
 
+    <p id="result"></p>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,52 +1,53 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f2f6fc;
+  background: #f4f6f9;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
   background: white;
-  padding: 30px;
+  padding: 20px 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
   width: 400px;
 }
 
-h1 {
-  color: #2c3e50;
+#preview-container {
+  margin: 15px 0;
 }
 
-.upload-box {
-  margin: 20px 0;
+#preview {
+  max-width: 100%;
+  max-height: 200px;
+  display: none;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.buttons {
+  margin: 15px 0;
 }
 
 button {
-  background: #3498db;
-  color: white;
+  padding: 10px 15px;
   border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 16px;
+  margin: 0 5px;
+  font-size: 14px;
 }
 
-button:hover {
-  background: #2980b9;
+#analyzeBtn {
+  background: #4caf50;
+  color: white;
 }
 
-#preview img {
-  max-width: 100%;
-  margin-top: 15px;
-  border-radius: 8px;
-}
-
-#result {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: bold;
+#deleteBtn {
+  background: #f44336;
+  color: white;
 }
